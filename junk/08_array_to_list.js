@@ -11,18 +11,9 @@ function arrayToList(arr) {
 }
 
 
-function listToArray(list) {
-    let arr = [];
-    arr.push(list.value);
-    arr.push(list.rest.value);
-    arr.push(list.rest.rest.value);
-
-
-    return arr;
-
+function listToArray({ value, rest }) {
+    return [value, ...(rest ? listToArray(rest) : [])]
 }
 
-
-console.log(arrayToList([10,20,30]));
-
+console.log(arrayToList([1,2,3]))
 // console.log(listToArray({ value: 10, rest: { value: 20, rest: { value: 30, rest: null } } }))
