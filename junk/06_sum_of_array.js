@@ -1,24 +1,23 @@
-function range(x,y,z) {
+function range(start, stop, step) {
      
-
-    if (x<y) {
-        if (z==null) {
-            z = 1;
+    if (start<stop) {
+        if (step==null) {
+            step = 1;
         }  
         let arr = [];
         
-        for (let i = x; i <= y; i+=z) {
+        for (let i = start; i <= stop; i+=step) {
             arr.push(i);
         }
         return arr;
 
-    } else if (x>y) {
-        if (z==null) {
-            z = -1;
+    } else if (start>stop) {
+        if (step==null) {
+            step = -1;
         }  
         let arr = [];
         
-        for (let i = x; i >= y; i+=z) {
+        for (let i = start; i >= stop; i+=step) {
             arr.push(i);
         }
         return arr;
@@ -33,7 +32,6 @@ function sum(arr) {
     }
     return sum;
 }
-
 
 console.log(sum(range(1, 100, 5)));
 

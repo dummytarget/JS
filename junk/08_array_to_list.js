@@ -15,5 +15,14 @@ function listToArray({ value, rest }) {
     return [value, ...(rest ? listToArray(rest) : [])]
 }
 
-console.log(arrayToList([1,2,3]))
+const nth = ({value, rest}, x) => {
+    let arr = [value, ...(rest ? listToArray(rest) : [])];
+    return arr[x];
+}
+
+// console.log(arrayToList([1,2,3]))
 // console.log(listToArray({ value: 10, rest: { value: 20, rest: { value: 30, rest: null } } }))
+
+console.log(nth(arrayToList([1,2,3]), 1))
+
+
