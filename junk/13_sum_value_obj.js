@@ -13,5 +13,4 @@ const sumSalary = (salary) => {
     return sum;
 }
   
-  
   console.log(sumSalary(salaries));
