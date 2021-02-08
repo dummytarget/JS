@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  script(src='/javascripts/calc.js')
+  h1= title
+  p Welcome to #{title}, this is #{title}
+  
+  <input type=text name='var1' id='var1'>
+  <input type=text name='var2' id='var2'>
+  <select id="aritmatika">
+  option(value="0") Pilih Aritmatika
+  option(value="1") +
+  option(value="2") -
+  option(value="3") *
+  option(value="4") /
+  </select>
+
+  <input id="calc-set" onclick="result()" type="button" value="SET"/>
+  
+  
+  h2 Hasil :
+  <p id="result"></p>
